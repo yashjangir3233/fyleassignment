@@ -1,1 +1,1 @@
-To run the code download the file containing the code and run the index.html file using live server extension on vs code
+To run the code download the file containing the code and run the index.html file using live server extension on vs code or after extracting the downloaded zip file just double click on index file and you are good to go
