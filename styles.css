@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+}
+
+.wholecontent{
+    display: flex;
+    height: 100vh;
+    background-color: #010409;
+}
+.resultsSection{
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+}
+
+.searchResultItem{
+    display: flex;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    background-color: #0c1017;
+    border: 1px solid #2a3037;
+    color: #3a73ee;
+    font-weight: 400;
+}
+
+.searchResultItem img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 15px;
+    border: 1px solid #2a3037;
+}
+
+.searchResults{
+    color: white;
+}
+
+.searchResultItem p{
+    cursor: pointer;
+}
+.pagination{
+    padding-left: 10px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.sideBar{
+    border-right: 1px solid #2a3037;
+    padding-top: 300px;
+    padding-left: 10px;
+    width: 300px;
+}
+.sideBar input{
+    height: 35px;
+    background-color: #0c1017;
+    color: #2a3037;
+    border: 1px solid #575f68;
+    width: 200px;
+    margin: 10px;
+    padding-left: 5px;
+    color: rgb(200, 192, 192);
+    border-radius: 5px;
+    outline: none;
+}
+.sideBar input:hover{
+    border: 1px solid #1c5792;
+}
+.sideBar input:focus{
+    border: 1px solid #2a70b5;
+}
+.sideBar button{
+    width: 200px;
+    color: rgb(200, 192, 192);
+    background-color: #20262c;
+    outline: none;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #575f68;
+    margin: 10px;
+    font-size: medium;
+}
+
+.sideBar button:hover{
+    border: 1px solid #1c5792;
+    cursor: pointer;
+}
+
+.userDetailsModal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.userDetailsContent{
+    padding: 20px;
+    overflow: scroll;
+    width: 80%;
+    height: 90%;
+    margin: 3% auto;
+    background-color: #fff;
+    overflow-x: hidden;
+    background-color: #010409;
+    color: white;
+    border: 1px solid #89919b;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #d8d5d5;
+    border-radius: 50px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 50px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.repoItem{
+    border: 1px solid black;
+}
+
+.clickedUserDetails{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    background-color: #0c1017;
+    border: 1px solid #2a3037;
+    padding: 10px;
+}
+.userClickedProfile{
+    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+.usernameClicked{
+    color: rgb(207, 198, 198);
+}
+
+
+.repoItem p:first-child{
+    color: #3a73ee;
+}
+.repoItem p:nth-child(2){
+    color: #89919b;
+    font-size: small;
+}
+
+.repoResults{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.repoItem{
+    flex: 1;
+    min-width: 300px;
+    height: 140px;
+    padding: 10px;
+    background-color: #0c1017;
+    border: 1px solid #2a3037;
+    margin: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    justify-content: start;
+    overflow: hidden;
+}
+
+select{
+    margin: 10px;
+    width: 50px;
+}
+.selecterLabel{
+    margin: 10px;
+    color: rgb(207, 198, 198);
+}
+.repoPagination{
+    margin: 10px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.loader{
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.languageBoxStyle{
+    border: 1px solid #585c60;
+    background-color: #000000;
+    font-size: smaller;
+    padding: 7px;
+    margin: 8px;
+    margin-top: 50px;
+    font-weight: 100;
+    color: #89919b;
+}
+.repoResults p:nth-child(2){
+    margin-bottom: 18px;
+}
+
+.repoResults p:nth-child(3){
+    font-size: small;
+    font-weight: 100;
+    color: #89919b;
+
+}
+
+
+

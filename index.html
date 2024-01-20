@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <!-- SideBar && SearchedUsers -->
+    <div class="wholecontent">
+
+        <!-- Sidebar containing searchBar -->
+        <div class="sideBar">
+            <input type="text" placeholder="search for username" id="searchBar">
+            <button id="searchUser">search</button>
+        </div>
+
+
+        <!-- Searchresults section -->
+        <div class="resultsSection">
+            <div class="searchResults">
+                Search For Users Using the search Bar but only first 1000 results will be shows  because of the restriction due to github api.Also after some searches of api requests limit is reached (can visit console for checking if it is showing 403 forbidden after 10 to 20 min rate limit will be reset and can access the website)
+            </div>
+
+            
+            <div class="pagination">
+        
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal For Each User -->
+    <div id="userModal" class="userDetailsModal">
+        <div class="userDetailsContent">
+            <span class="close" id="closeModalBtn">X</span>
+            <div class="clickedUserDetails">
+                <img src="hello" class="userClickedProfile" alt="">
+                <p class="usernameClicked"></p>
+            </div>
+            <label for="" class="selecterLabel">select number of pages shown per page</label>
+            <select name="chooseNumber" id="chooseNumberPerPage" class="perPageAmount">
+                <option value="10" selected="selected">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+                <option value="90">90</option>
+                <option value="100">100</option>
+            </select>
+            <div class="repoResultsSection">
+                <div class="repoResults"></div>
+                <div class="repoPagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader"></div>
+    <script src="script.js"></script>
+</body>
+</html>
