@@ -34,7 +34,7 @@ function searchUsers() {
     fetch(SEARCHURL)
         .then(res => {
             if(!res.ok){
-                throw new Error(`Fetching ${res.statusCode} failed`);
+                throw new Error(`Fetching ${res.status} failed`);
             }
             return res.json();
         })
@@ -116,7 +116,14 @@ function fetchUserRepos(username) {
     fetch(REPOAPIURL)
         .then(res => {
             if(!res.ok){
-                throw new Error(`fetching repo failed ${res.statusCode}`);
+                console.log(res);
+                if(res.status === 403){
+                    const errorElement = document.createElement('div');
+                    errorElement.textContent = 'rate limit exceeded please try again after 10 to 20 minutes';
+                    errorElement.style.color = 'red';
+                    repoResultsContainer.appendChild(errorElement);
+                }
+                throw new Error(`fetching repo failed ${res.status}`);
             }
             const headerLink = res.headers.get('Link');
                 const totalPages = headerLink && headerLink.match(/page=(\d+)&per_page=(\d+)>; rel="last"/);
@@ -137,7 +144,7 @@ function fetchUserRepos(username) {
                     fetch(LANGAPI)
                         .then(res => {
                             if(!res.ok){
-                                throw new Error(`fetching languages failed${res.statusCode}`);
+                                throw new Error(`fetching languages failed${res.status}`);
                             }
                             return res.json();
                         })
